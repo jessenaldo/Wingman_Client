@@ -1,0 +1,29 @@
+<ion-view title="Wingman">
+
+<ion-nav-buttons side="primary">
+  <button class="button button-icon ion-close-circled"
+          ng-click="disconnect()">
+
+  </button>
+</ion-nav-buttons>
+
+<ion-nav-buttons side="secondary">
+  <button class="button button-icon ion-chatbubble"
+          ng-click="chat()">
+
+  </button>
+</ion-nav-buttons>
+
+<ion-content content scroll="false">
+
+    <ng-map style="display: block; height: 100%;" center="{{mapService.lat}}, {{mapService.lon}}" zoom="13" disable-default-u-i="false">
+        <marker clickable="false" position="{{mapService.lat}}, {{mapService.lon}}"></marker>
+
+        <marker clickable="false" position="{{mapService.winglat}}, {{mapService.winglon}}"></marker>
+
+    </ng-map>
+
+
+
+</ion-content>
+</ion-view>

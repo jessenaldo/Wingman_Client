@@ -1,0 +1,28 @@
+<ion-view view-title="Map">
+
+<ion-nav-buttons side="primary">
+  <button class="button icon-left ion-person-add"
+          ng-click="requestWingman()">&nbsp; Find Wingman
+  </button>
+</ion-nav-buttons>
+
+<ion-nav-buttons side="secondary">
+  <button class="button button-icon ion-navigate"
+          ng-click="updateLocation()">
+  </button>
+</ion-nav-buttons>
+
+
+<ion-content scroll="false">
+
+
+    <ng-map style="display: block; height: 100%;" center="{{mapService.lat}}, {{mapService.lon}}" zoom="13" disable-default-u-i="false">
+
+      <marker clickable="false" position="{{mapService.lat}}, {{mapService.lon}}"></marker>
+
+
+    </ng-map>
+
+</ion-content>
+
+</ion-view>

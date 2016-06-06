@@ -1,0 +1,65 @@
+.intro {
+
+  background-color: $light;
+
+
+  //Flexbox
+  //iOS 7.1+ needs a prefix(-webkit-) for Safari browser support
+  //-ms-flex... refers to Internet Explorer
+
+  .center-content {
+
+    //initialize flexbox
+    display: -webkit-box;  //Safari/Chrome supported flex, Old 2009 version Flex
+    display: -ms-flexbox;  //IE supported flex, Old 2011 version Flex
+
+    //Current Flex
+    display: -webkit-flex;
+    display: flex;
+
+    //Flex items are aligned in the cross axis of the current line of the flex container
+    //options: stretch, flex-start, flex-end, center, baseline
+    -webkit-box-align: center; //old
+      -ms-flex-align: center; //old
+
+        align-items: center; //current
+    -webkit-align-items: center; //current
+
+    //specify how a box packs its contents in the direction of its layout
+    -webkit-box-pack: center;
+      -ms-flex-pack: center;
+
+    //aligns flex items along the main axis of the curr line of the flex container
+    //distributes left free space
+        justify-content: center;
+    -webkit-justify-content: center;
+
+    //box will lay out its contents vertically
+    -webkit-box-orient: vertical;
+
+    //specifies how flex items are laid out in the flex container, by setting
+    //the direction of the flex container's main axis
+    -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+    -webkit-flex-direction: column;
+
+  }
+
+
+  .logo {
+    height: 100px;
+    width: 100px;
+    margin-top: -50px;
+    margin-bottom: 50px;
+  }
+
+
+
+  .bar-footer {
+    background-color: #3b5998;
+    button {
+      margin: 0;
+    }
+  }
+}

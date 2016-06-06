@@ -1,0 +1,41 @@
+<ion-view title="Wingman Chat">
+
+  <ion-content>
+    <ol class="discussion">
+      <li class=""
+          ng-class="{'other':message.userId != user.current.userId,
+          'self':!(message.userId != user.current.userId)}"
+          ng-repeat="message in data.messages">
+          <div class="avatar"
+               ng-if="message.userId != user.current.userId">
+              <img ng-src="{{message.profilePic}}"/>
+          </div>
+          <div class="messages">
+            <p>{{message.text}}</p>
+            <time>{{message.username}} <span am-time-ago="message.timestamp"></span> </time>
+          </div>
+          <div class="avatar"
+               ng-if="!(message.userId != user.current.userId)">
+              <img ng-src="{{message.profilePic}}"/>
+          </div>
+      </li>
+    </ol>
+
+
+  </ion-content>
+
+  <ion-footer-bar keyboard-attach
+                  class="bar-assertive item-input-inset">
+    <label class="item-input-wrapper">
+      <input type="text"
+             placeholder="Type your message"
+             ng-enter="sendMessage()"
+             ng-model="data.message"/>
+    </label>
+    <button class="button button-clear"
+            ng-click="sendMessage()">
+      Send
+    </button>
+  </ion-footer-bar>
+
+</ion-view>

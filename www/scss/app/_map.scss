@@ -1,0 +1,17 @@
+.scroll-content > map {
+  height: 100%;
+}
+
+.scroll-content > .scroll {
+  height: 100%;
+}
+
+.scroll-content > .scroll > map {
+  min-height: 100%;
+}
+
+#map_canvas {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
